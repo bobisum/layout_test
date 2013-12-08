@@ -1,0 +1,80 @@
+@import "compass/reset";
+@import "compass/css3";
+
+
+/* VARIABLES */
+
+
+/* VARIABLES END */
+
+
+/* MIXINS */
+@mixin placeholder($color){
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		opacity: 1;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin master-transition {
+	@include transition(0.3s);
+}
+/* MIXINS END */
+
+
+/* RESETS */
+* {
+	text-decoration: none;
+	outline: none;
+}
+
+.clearfix {
+	zoom:1;
+	&:before, &:after {
+		content: "\0020"; 
+		display: block; 
+		height: 0; 
+		overflow: hidden; 
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+body {
+	font-family: 'Arimo', Helvetica, sans-serif;
+	font-size: 62.5%;
+}
+
+input, input::-moz-focus-inner {
+	border: none;
+}
+
+input {
+	-webkit-appearance: none;
+	@include border-radius(0);
+	border: none;
+}
+
+input:focus, textarea:focus, input:focus::-moz-focus-inner {
+	outline: none;
+	border: none;
+}
+
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+/* RESETS END */

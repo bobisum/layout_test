@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Amon 2.0</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body class="preload">
+
+		<!-- Navigation -->
+		<div id="navigation">
+			<div class="column">
+
+				<!-- Home button -->
+				<a href="" id="home">amon<span></span></a>
+
+				
+				<!-- Menu -->
+				<ul id="menu">
+					<li><a href="" class="active">Home</a></li>
+					<li><a href="">Features</a></li>
+					<li><a href="">Pricing</a></li>
+					<li><a href="">Login</a></li>
+				</ul>
+
+			</div>
+		</div><!-- Navigation end -->
+
+		<!-- Heading -->
+		<div id="header">
+			<div class="column">
+
+				<!-- slida navigation -->
+				<a href="" class="slida-navigation batch" id="left-arrow" data-icon="&#xF14A"></a>
+				<a href="" class="slida-navigation batch" id="right-arrow" data-icon="&#xF14B"></a>
+
+				<!-- slida -->
+				<div id="slida-container">
+					<div id="handler">
+						<div>
+							<h2>Simple Server and Website Monitoring</h2>
+							<p>Easy integration. All metrics. Worry-free.</p>
+							<img src="img/slide_1.jpg" alt="Description">
+						</div>
+						<div>
+							<h2>Simple Server and Website Monitoring</h2>
+							<p>Easy integration. All metrics. Worry-free.</p>
+							<img src="img/slide_1.jpg" alt="Description">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div><!-- Heading end -->
+
+		<!-- Get started -->
+		<div id="get-started">
+			<div class="column">
+
+				<div id="info-started">
+					<h3>Start collecting data</h3>
+					<p>30 seconds, 2 lines of code</p>
+				</div>
+
+				<form action="">
+					<ul>
+						<li><input type="text" placeholder="Email"></li>
+						<li><input type="password" placeholder="Password"></li>
+						<li><input type="submit" value="Get started"></li>
+					</ul>
+				</form>
+				
+			</div>
+		</div><!-- Get started -->
+
+		<!-- Features -->
+		<div id="features">
+			<div class="column">
+				<ul>
+					<li class="features-element" data-position="one">
+						<h2>Deep system monitoring</h2>
+						<p>I thought him the queerest old Quaker I ever saw, especially as Peleg, his friend and old shipmate, seemed such a blusterer. But I said nothing, only looking round me sharply. Peleg now threw open</p>
+						<a href="">Server monitoring</a>
+					</li>
+					<li class="features-element" data-position="two">
+						<h2>Flexible alert system</h2>
+						<p>I thought him the queerest old Quaker I ever saw, especially as Peleg, his friend and old shipmate, seemed such a blusterer. But I said nothing, only looking round me sharply. Peleg now threw open</p>
+						<a href="">Server monitoring</a>
+					</li>
+					<li class="features-element" data-position="tree">
+						<h2>Easy uptime monitoring</h2>
+						<p>I thought him the queerest old Quaker I ever saw, especially as Peleg, his friend and old shipmate, seemed such a blusterer. But I said nothing, only looking round me sharply. Peleg now threw open</p>
+						<a href="">Server monitoring</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div><!-- Features end -->
+
+		<!-- Extra features -->
+		<div id="extra-features">
+			<div class="column">
+				<ul class="extra-features">
+					<li>
+
+						<h3 data-icon="&#xF081">Batteries included</h3>
+						<p>Amon works with the platforms you already use. Capture metrics and events and search to see what's happening.<br> Click a tile below to learn more:</p>
+
+						<ul class="logo-links">
+							<li><a href="" class="test"><span class="centerer"></span><img src="img/logos/apache.jpg" alt="Apache"></a><div>asdasd</div></li>
+							<li><a href=""><img src="" alt=""></a></li>
+							<li><a href=""><img src="" alt=""></a></li>
+						</ul>
+
+					</li>
+				</ul>		
+			</div>
+		</div><!-- Extra features end -->
+
+		<!-- Footer -->
+		<div id="footer">
+			
+		</div><!-- Footer end -->
+
+
+		<!-- Javascript -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/libs/slida/slida.js"></script>
+		<script src="js/libs/tooltip/tooltip.js"></script>
+		<script>
+		$(function() {
+
+			// loading transitions fix
+			$(window).load(function() {
+				$("body").removeClass();
+			});
+			// loading transitions fix end
+
+			// features animation
+			var features = $('#features ul');
+
+			$('.features-element').hover(function(){
+				var position = $(this).data("position");
+
+				features.removeClass();
+				features.addClass(position);
+			}, function(){
+				features.removeClass();
+			});
+			// features animation end
+
+
+			// slida
+			$('#handler').create_slider({
+				left_link: $('#right-arrow'),
+				right_link: $('#left-arrow')
+			});
+			// slida end
+
+
+			// tipsy
+			$('.test').tipsy();
+			// tipsy end
+		});
+		</script>
+		<!-- Javascript end -->
+
+	</body>
+</html>
